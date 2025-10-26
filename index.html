@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanox Technologies - Medical IT Solutions & AI Innovation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-hex">
+                        <svg viewBox="0 0 100 100" class="hex-logo">
+                            <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" 
+                                     fill="none" 
+                                     stroke="currentColor" 
+                                     stroke-width="3"/>
+                            <circle cx="50" cy="40" r="4" fill="currentColor"/>
+                            <circle cx="40" cy="50" r="4" fill="currentColor"/>
+                            <circle cx="60" cy="50" r="4" fill="currentColor"/>
+                            <circle cx="45" cy="60" r="4" fill="currentColor"/>
+                            <circle cx="55" cy="60" r="4" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="logo-text">Nanox<span class="logo-sub">TECHNOLOGIES</span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#technology" class="nav-link">Technology</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon sun-icon">☀️</span>
+                        <span class="theme-icon moon-icon">🌙</span>
+                    </button>
+                        <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-tag">Medical IT Innovation</span>
+                    <h1 class="hero-title">Transforming Healthcare Through <span class="gradient-text">AI & Technology</span></h1>
+                    <p class="hero-description">Empowering medical institutions with cutting-edge IT solutions and artificial intelligence to deliver superior patient care and operational excellence.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Get Started</a>
+                        <a href="#solutions" class="btn btn-secondary">Explore Solutions</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <h3>500+</h3>
+                            <p>Healthcare Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>99.9%</h3>
+                            <p>Uptime Guarantee</p>
+                        </div>
+                        <div class="stat">
+                            <h3>24/7</h3>
+                            <p>Expert Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="ai-visualization-simple">
+                        <!-- Central AI Core -->
+                        <div class="ai-core-simple">
+                            <div class="core-circle circle-1"></div>
+                            <div class="core-circle circle-2"></div>
+                            <div class="core-circle circle-3"></div>
+                            <div class="ai-icon">
+                                <span class="ai-label">AI</span>
+                            </div>
+                        </div>
+
+                        <!-- Data Cards -->
+                        <div class="data-card card-1">
+                            <div class="card-icon-simple">📊</div>
+                            <div class="card-text">
+                                <div class="card-title">Health Data</div>
+                                <div class="card-stat">Real-time</div>
+                            </div>
+                        </div>
+
+                        <div class="data-card card-2">
+                            <div class="card-icon-simple">🤖</div>
+                            <div class="card-text">
+                                <div class="card-title">AI Analysis</div>
+                                <div class="card-stat">Active</div>
+                            </div>
+                        </div>
+
+                <div class="data-card card-3">
+                    <div class="card-icon-simple">🔒</div>
+                    <div class="card-text">
+                        <div class="card-title">HIPAA Compliant</div>
+                        <div class="card-stat">Healthcare Security</div>
+                    </div>
+                </div>                        <!-- Connecting Lines -->
+                        <svg class="connection-svg" viewBox="0 0 500 500">
+                            <line x1="250" y1="250" x2="100" y2="120" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4" stroke-dasharray="5,5">
+                                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="250" y1="250" x2="400" y2="150" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4" stroke-dasharray="5,5">
+                                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite"/>
+                            </line>
+                            <line x1="250" y1="250" x2="350" y2="400" stroke="url(#lineGradient)" stroke-width="2" opacity="0.4" stroke-dasharray="5,5">
+                                <animate attributeName="stroke-dashoffset" from="0" to="20" dur="1s" repeatCount="indefinite"/>
+                            </line>
+                            <defs>
+                                <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <!-- Floating Particles -->
+                        <div class="simple-particle p-1"></div>
+                        <div class="simple-particle p-2"></div>
+                        <div class="simple-particle p-3"></div>
+                        <div class="simple-particle p-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Nanox</span>
+                <h2 class="section-title">Pioneering the Future of Medical Technology</h2>
+                <p class="section-description">We combine deep healthcare expertise with advanced technology to create solutions that matter.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="medical-visualization">
+                        <div class="simple-stats">
+                            <!-- Stat Cards -->
+                            <div class="stat-card">
+                                <div class="stat-icon">💗</div>
+                                <div class="stat-info">
+                                    <div class="stat-label">Heart Rate</div>
+                                    <div class="stat-value">72 <span>BPM</span></div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon">🫁</div>
+                                <div class="stat-info">
+                                    <div class="stat-label">Oxygen</div>
+                                    <div class="stat-value">98 <span>%</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Circles -->
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 120 120">
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="rgba(59, 130, 246, 0.1)" stroke-width="10"/>
+                                    <circle cx="60" cy="60" r="52" fill="none" stroke="url(#grad1)" stroke-width="10"
+                                            stroke-dasharray="327" stroke-dashoffset="82" transform="rotate(-90 60 60)"
+                                            stroke-linecap="round"/>
+                                    <defs>
+                                        <linearGradient id="grad1">
+                                            <stop offset="0%" style="stop-color:#3b82f6"/>
+                                            <stop offset="100%" style="stop-color:#06b6d4"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="progress-text">
+                                    <div class="progress-value">75%</div>
+                                    <div class="progress-label">AI Accuracy</div>
+                                </div>
+                            </div>
+
+                            <div class="progress-circle">
+                                <svg viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="44" fill="none" stroke="rgba(16, 185, 129, 0.1)" stroke-width="8"/>
+                                    <circle cx="50" cy="50" r="44" fill="none" stroke="#10b981" stroke-width="8"
+                                            stroke-dasharray="276" stroke-dashoffset="28" transform="rotate(-90 50 50)"
+                                            stroke-linecap="round"/>
+                                </svg>
+                                <div class="progress-text">
+                                    <div class="progress-value">90%</div>
+                                    <div class="progress-label">Uptime</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Leading Medical IT Innovation Since 2015</h3>
+                    <p>Nanox Technologies stands at the intersection of healthcare and technology, delivering transformative IT solutions specifically designed for the medical industry. Our team of healthcare IT specialists and AI engineers work tirelessly to address the unique challenges faced by modern medical institutions.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>HIPAA Compliant</h4>
+                                <p>All solutions meet strict healthcare data privacy standards</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>AI-Powered Insights</h4>
+                                <p>Leverage machine learning for better patient outcomes</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div class="feature-text">
+                                <h4>Scalable Infrastructure</h4>
+                                <p>Grow seamlessly from clinics to large hospital networks</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Solutions</span>
+                <h2 class="section-title">Comprehensive Medical IT Solutions</h2>
+                <p class="section-description">Tailored technology platforms designed for every aspect of modern healthcare delivery.</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">🏥</div>
+                    <h3>Hospital Management System</h3>
+                    <p>Integrated platform for patient records, scheduling, billing, and resource management with real-time analytics.</p>
+                    <ul class="solution-features">
+                        <li>Electronic Health Records (EHR)</li>
+                        <li>Appointment Scheduling</li>
+                        <li>Inventory Management</li>
+                        <li>Billing & Insurance</li>
+                    </ul>
+                    <a href="#contact" class="solution-link">Learn More →</a>
+                </div>
+                <div class="solution-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="solution-icon">🤖</div>
+                    <h3>AI Diagnostic Assistant</h3>
+                    <p>Advanced machine learning algorithms that assist healthcare professionals in accurate diagnosis and treatment planning.</p>
+                    <ul class="solution-features">
+                        <li>Medical Image Analysis</li>
+                        <li>Predictive Health Analytics</li>
+                        <li>Treatment Recommendations</li>
+                        <li>Risk Assessment</li>
+                    </ul>
+                    <a href="#contact" class="solution-link">Learn More →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📱</div>
+                    <h3>Telemedicine Platform</h3>
+                    <p>HIPAA-compliant virtual care solution enabling secure remote consultations and patient monitoring.</p>
+                    <ul class="solution-features">
+                        <li>Video Consultations</li>
+                        <li>Remote Patient Monitoring</li>
+                        <li>E-Prescriptions</li>
+                        <li>Patient Portal</li>
+                    </ul>
+                    <a href="#contact" class="solution-link">Learn More →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">📊</div>
+                    <h3>Healthcare Analytics</h3>
+                    <p>Data-driven insights platform for operational efficiency, patient outcomes, and strategic decision-making.</p>
+                    <ul class="solution-features">
+                        <li>Performance Dashboards</li>
+                        <li>Patient Outcome Tracking</li>
+                        <li>Financial Analytics</li>
+                        <li>Predictive Modeling</li>
+                    </ul>
+                    <a href="#contact" class="solution-link">Learn More →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">🔬</div>
+                    <h3>Laboratory Information System</h3>
+                    <p>Streamlined lab management with automated workflows, quality control, and result reporting.</p>
+                    <ul class="solution-features">
+                        <li>Sample Tracking</li>
+                        <li>Automated Reporting</li>
+                        <li>Quality Assurance</li>
+                        <li>Equipment Integration</li>
+                    </ul>
+                    <a href="#contact" class="solution-link">Learn More →</a>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-icon">💊</div>
+                    <h3>Pharmacy Management</h3>
+                    <p>Complete pharmacy solution with inventory control, prescription management, and drug interaction alerts.</p>
+                    <ul class="solution-features">
+                        <li>Prescription Processing</li>
+                        <li>Drug Database</li>
+                        <li>Inventory Control</li>
+                        <li>Interaction Alerts</li>
+                    </ul>
+                    <a href="#contact" class="solution-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Services</span>
+                <h2 class="section-title">End-to-End IT Services</h2>
+                <p class="section-description">From consultation to maintenance, we provide complete support for your healthcare IT needs.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">01</div>
+                    <h3>IT Consultation</h3>
+                    <p>Expert guidance on technology strategy, system selection, and digital transformation for healthcare organizations.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">02</div>
+                    <h3>Custom Development</h3>
+                    <p>Tailored software solutions built to meet your specific healthcare workflows and requirements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">03</div>
+                    <h3>System Integration</h3>
+                    <p>Seamless integration of new and existing systems including EHR, PACS, and third-party applications.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">04</div>
+                    <h3>Cloud Migration</h3>
+                    <p>Secure transition to cloud infrastructure with enhanced scalability, security, and cost efficiency.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">05</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Comprehensive security solutions protecting sensitive patient data and ensuring regulatory compliance.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-number">06</div>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock technical support ensuring your critical healthcare systems remain operational.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technology Stack</span>
+                <h2 class="section-title">Built on Cutting-Edge Technologies</h2>
+                <p class="section-description">We leverage the latest technologies to deliver robust, scalable, and secure healthcare solutions.</p>
+            </div>
+            <div class="tech-categories">
+                <div class="tech-category">
+                    <h3>Artificial Intelligence</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">Computer Vision</span>
+                        <span class="tech-tag">Natural Language Processing</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">Predictive Analytics</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Azure</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Microservices</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Development</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">.NET</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">REST APIs</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h3>Security & Compliance</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">HIPAA</span>
+                        <span class="tech-tag">HL7/FHIR</span>
+                        <span class="tech-tag">Encryption</span>
+                        <span class="tech-tag">OAuth 2.0</span>
+                        <span class="tech-tag">Penetration Testing</span>
+                        <span class="tech-tag">GDPR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">Trusted by Healthcare Leaders</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Nanox Technologies transformed our hospital operations. Their AI diagnostic system has improved our accuracy and reduced diagnosis time by 40%. Exceptional team and support."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">DM</div>
+                        <div class="author-info">
+                            <h4>Dr. Michael Chen</h4>
+                            <p>Chief Medical Officer, Memorial Hospital</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"The hospital management system is intuitive and powerful. We've seen significant improvements in patient satisfaction and operational efficiency. Best investment we've made."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SP</div>
+                        <div class="author-info">
+                            <h4>Sarah Patterson</h4>
+                            <p>CEO, HealthCare Plus Network</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"Outstanding telemedicine platform that's HIPAA compliant and user-friendly. Our patients love the convenience, and we've expanded our reach significantly."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RJ</div>
+                        <div class="author-info">
+                            <h4>Dr. Robert Johnson</h4>
+                            <p>Director, Community Health Clinic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Let's Transform Healthcare Together</h2>
+                    <p>Ready to revolutionize your healthcare IT infrastructure? Get in touch with our experts to discuss your specific needs.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@nanoxtech.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>123 Medical Center Blvd, Suite 500<br>San Francisco, CA 94108</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="organization" placeholder="Organization">
+                        </div>
+                        <div class="form-group">
+                            <select id="interest" required>
+                                <option value="">Area of Interest</option>
+                                <option value="hms">Hospital Management System</option>
+                                <option value="ai">AI Diagnostic Assistant</option>
+                                <option value="telemedicine">Telemedicine Platform</option>
+                                <option value="analytics">Healthcare Analytics</option>
+                                <option value="lab">Laboratory Information System</option>
+                                <option value="pharmacy">Pharmacy Management</option>
+                                <option value="consultation">IT Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Tell us about your needs" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-hex">
+                            <svg viewBox="0 0 100 100" class="hex-logo">
+                                <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" 
+                                         fill="none" 
+                                         stroke="currentColor" 
+                                         stroke-width="3"/>
+                                <circle cx="50" cy="40" r="4" fill="currentColor"/>
+                                <circle cx="40" cy="50" r="4" fill="currentColor"/>
+                                <circle cx="60" cy="50" r="4" fill="currentColor"/>
+                                <circle cx="45" cy="60" r="4" fill="currentColor"/>
+                                <circle cx="55" cy="60" r="4" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Nanox<span class="logo-sub">TECHNOLOGIES</span></span>
+                    </div>
+                    <p>Transforming healthcare through innovative IT solutions and artificial intelligence.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#solutions">Hospital Management</a></li>
+                        <li><a href="#solutions">AI Diagnostics</a></li>
+                        <li><a href="#solutions">Telemedicine</a></li>
+                        <li><a href="#solutions">Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">IT Consultation</a></li>
+                        <li><a href="#services">Custom Development</a></li>
+                        <li><a href="#services">Cloud Migration</a></li>
+                        <li><a href="#services">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Nanox Technologies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
