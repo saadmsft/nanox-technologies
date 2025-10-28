@@ -1,27 +1,31 @@
-// Dark Mode Toggle
+// Dark Mode Toggle (if exists)
 const themeToggle = document.getElementById('themeToggle');
 const htmlElement = document.documentElement;
 
-// Check for saved theme preference or default to 'light' mode
-const currentTheme = localStorage.getItem('theme') || 'light';
-htmlElement.setAttribute('data-theme', currentTheme);
+if (themeToggle) {
+    // Check for saved theme preference or default to 'light' mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
 
-themeToggle.addEventListener('click', () => {
-    const theme = htmlElement.getAttribute('data-theme');
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    
-    htmlElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
+    themeToggle.addEventListener('click', () => {
+        const theme = htmlElement.getAttribute('data-theme');
+        const newTheme = theme === 'light' ? 'dark' : 'light';
+        
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+}
 
 // Mobile Navigation Toggle
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-link');
@@ -207,7 +211,7 @@ const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
 const productData = {
     'gen-ai': {
         title: '🤖 NanoX Gen AI Assistants',
-        description: 'AI assistants with RAG, MCP and A2A functionality for futuristic Agentic AI ecosystem available with Voice, Chat and Avatar interfaces.',
+        description: 'Intelligent AI assistants with RAG, MCP, and agent-to-agent communication. Deploy conversational AI across voice, chat, and avatar interfaces to automate support, sales, and operations.',
         workflow: {
             title: '⚡ Workflow Pipeline',
             steps: [
@@ -221,17 +225,17 @@ const productData = {
         tools: ['LangChain', 'Azure AI Search', 'FastAPI', 'WebRTC', 'React'],
         models: ['GPT-4 Turbo', 'Claude 3.5 Sonnet', 'Whisper v3', 'Azure TTS', 'Ada-002'],
         industries: [
-            '🏥 Healthcare - Patient Support & Triage',
             '🏦 Finance - Customer Service & Advisory',
             '🏪 Retail - Virtual Shopping Assistants',
+            '🏢 Enterprise - Internal Support Automation',
             '🎓 Education - Personalized Learning Tutors',
             '⚖️ Legal - Document Analysis & Research',
-            '🏭 Manufacturing - Operations Support'
+            '� Healthcare - Patient Support & Triage'
         ]
     },
     'doc-proc': {
         title: '📄 NanoX Doc-Proc',
-        description: 'Gen AI capable document processing, entity extraction, contract comparisons and much more for intelligent document workflows.',
+        description: 'Advanced document intelligence with Gen AI-powered entity extraction, contract analysis, and automated comparison. Transform unstructured documents into actionable insights.',
         workflow: {
             title: '⚡ Processing Pipeline',
             steps: [
@@ -245,17 +249,17 @@ const productData = {
         tools: ['Azure Document Intelligence', 'PyPDF2', 'Unstructured', 'Celery', 'Redis'],
         models: ['GPT-4o', 'Claude 3 Opus', 'Phi-3', 'LayoutLM v3', 'Azure OpenAI'],
         industries: [
-            '🏥 Healthcare - Medical Records Processing',
             '⚖️ Legal - Contract Review & Compliance',
             '🏦 Banking - Loan Document Processing',
             '🏢 Insurance - Claims Processing',
             '🏛️ Government - Public Records Management',
-            '📦 Logistics - Shipping Documentation'
+            '📦 Logistics - Shipping Documentation',
+            '🏥 Healthcare - Medical Records Processing'
         ]
     },
     'nl-sql': {
         title: '💬 NanoX NL-SQL',
-        description: 'Your way to talk to multiple sources of SQL with natural language to make sense and take next big decision backed by data via elegant UI and natural interface.',
+        description: 'Query your databases using natural language. Connect multiple SQL sources, ask questions in plain English, and get instant visual insights. Data democratization for everyone.',
         workflow: {
             title: '⚡ Query Execution Flow',
             steps: [
@@ -269,12 +273,12 @@ const productData = {
         tools: ['SQLAlchemy', 'Apache Superset', 'Streamlit', 'PostgreSQL', 'DuckDB'],
         models: ['GPT-4 Turbo', 'CodeLlama 70B', 'Gemini Pro', 'DeepSeek Coder', 'GPT-3.5 Turbo'],
         industries: [
-            '🏥 Healthcare - Patient Data Analytics',
             '🏪 Retail - Sales Performance Analysis',
             '🏦 Finance - Transaction Intelligence',
             '📊 Marketing - Campaign Analytics',
             '🏭 Manufacturing - Production Metrics',
-            '🚗 Automotive - Fleet Management'
+            '🚗 Automotive - Fleet Management',
+            '🏥 Healthcare - Patient Data Analytics'
         ]
     }
 };
