@@ -104,41 +104,38 @@
           </div>
         </div>
 
-        <div class="roles">
-          <h2 class="fade-up delay-2" style="font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 2rem;">Open roles</h2>
-
-          <a class="role fade-up delay-2" href="mailto:careers@nanoxtech.ai?subject=Senior%20Full-Stack%20Engineer">
-            <div>
-              <h3>Senior Full-Stack Engineer</h3>
-              <p class="meta">React + Node/Laravel · Remote / Dubai / Doha · Full-time</p>
+        <div class="roles" data-roles-root>
+          <div class="roles-toolbar fade-up delay-2">
+            <h2 class="roles-title">Open roles</h2>
+            <div class="roles-search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              <input type="search" data-roles-search placeholder="Search roles…" aria-label="Search roles">
             </div>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+          </div>
 
-          <a class="role fade-up delay-3" href="mailto:careers@nanoxtech.ai?subject=Solution%20Architect">
-            <div>
-              <h3>Solution Architect</h3>
-              <p class="meta">Enterprise systems · Remote / Dubai / Doha · Full-time</p>
+          <div class="roles-filters fade-up delay-2" data-roles-filters>
+            <div class="filter-group">
+              <span class="filter-label">Team</span>
+              <div class="filter-chips" data-filter-group="team"></div>
             </div>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+            <div class="filter-group">
+              <span class="filter-label">Location</span>
+              <div class="filter-chips" data-filter-group="location"></div>
+            </div>
+            <div class="filter-group">
+              <span class="filter-label">Seniority</span>
+              <div class="filter-chips" data-filter-group="seniority"></div>
+            </div>
+          </div>
 
-          <a class="role fade-up delay-4" href="mailto:careers@nanoxtech.ai?subject=DevOps%2FSRE%20Engineer">
-            <div>
-              <h3>DevOps / SRE Engineer</h3>
-              <p class="meta">AWS / Azure · Remote / Dubai / Doha · Full-time</p>
-            </div>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+          <div class="roles-list" data-roles-list aria-live="polite"></div>
 
-          <a class="role fade-up delay-5" href="mailto:careers@nanoxtech.ai?subject=AI%2FML%20Engineer">
-            <div>
-              <h3>AI / ML Engineer</h3>
-              <p class="meta">LLM features, RAG, evaluation · Remote / Dubai / Doha · Full-time</p>
-            </div>
-            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
+          <p class="roles-empty" data-roles-empty hidden>No roles match those filters. <button type="button" class="link-button" data-roles-reset>Clear filters</button></p>
+          <p class="roles-loading" data-roles-loading hidden>Loading roles…</p>
         </div>
+
+        <!-- JSON-LD JobPosting injected by careers.js for Google Jobs -->
+        <script type="application/ld+json" data-roles-jsonld>{}</script>
 
         <div class="careers-cta fade-up delay-6">
           <h3>Don't see your role?</h3>
@@ -176,5 +173,6 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/careers.js"></script>
 </body>
 </html>

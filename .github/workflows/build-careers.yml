@@ -1,0 +1,129 @@
+name: Build careers.json from issues
+
+on:
+  issues:
+    types: [opened, edited, closed, reopened, labeled, unlabeled, deleted]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: read
+
+concurrency:
+  group: build-careers
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build data/careers.json from job-posting issues
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            // Fetch all open issues with the `job-posting` label
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'job-posting',
+              per_page: 100,
+            });
+
+            // Parse a GitHub Issue Forms body into { fieldId: value }
+            // Issue Forms render fields as: ### Field label\n\nvalue\n\n### Next field...
+            // We map the human label back to a stable id by referencing the template.
+            const FIELD_MAP = {
+              'Job title': 'title',
+              'Team': 'team',
+              'Seniority': 'seniority',
+              'Location': 'location',
+              'Employment type': 'type',
+              'Salary range (optional)': 'salary',
+              'One-paragraph summary': 'summary',
+              "What you'll do": 'responsibilities',
+              "What we're looking for": 'requirements',
+              'Apply email': 'applyEmail',
+            };
+
+            function parseIssueBody(body) {
+              if (!body) return {};
+              const out = {};
+              // Split on h3 headings: "### Label"
+              const parts = body.split(/\r?\n### /).map((p, i) => i === 0 ? p.replace(/^### /, '') : p);
+              for (const part of parts) {
+                const nl = part.indexOf('\n');
+                if (nl === -1) continue;
+                const label = part.slice(0, nl).trim();
+                const value = part.slice(nl + 1).trim();
+                const key = FIELD_MAP[label];
+                if (!key) continue;
+                if (value === '_No response_' || value === '') continue;
+                out[key] = value;
+              }
+              return out;
+            }
+
+            function toBullets(s) {
+              if (!s) return [];
+              return s.split(/\r?\n/)
+                .map(l => l.replace(/^[-*•]\s*/, '').trim())
+                .filter(Boolean);
+            }
+
+            function slugify(s) {
+              return (s || '').toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/(^-|-$)/g, '')
+                .slice(0, 60);
+            }
+
+            const roles = issues.map(issue => {
+              const f = parseIssueBody(issue.body || '');
+              return {
+                id: issue.number,
+                slug: slugify(f.title || issue.title),
+                title: f.title || issue.title.replace(/^\[Role\]\s*/i, '').trim(),
+                team: f.team || '',
+                seniority: f.seniority || '',
+                location: f.location || '',
+                type: f.type || '',
+                salary: f.salary || '',
+                summary: f.summary || '',
+                responsibilities: toBullets(f.responsibilities),
+                requirements: toBullets(f.requirements),
+                applyEmail: f.applyEmail || 'careers@nanoxtech.ai',
+                postedAt: issue.created_at,
+                updatedAt: issue.updated_at,
+                url: issue.html_url,
+              };
+            }).sort((a, b) => new Date(b.postedAt) - new Date(a.postedAt));
+
+            const payload = {
+              generatedAt: new Date().toISOString(),
+              count: roles.length,
+              roles,
+            };
+
+            const dir = path.join(process.cwd(), 'data');
+            fs.mkdirSync(dir, { recursive: true });
+            const file = path.join(dir, 'careers.json');
+            fs.writeFileSync(file, JSON.stringify(payload, null, 2) + '\n');
+            console.log(`Wrote ${file} with ${roles.length} role(s).`);
+
+      - name: Commit changes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain data/careers.json)" ]; then
+            git add data/careers.json
+            git commit -m "chore(careers): rebuild careers.json from issues"
+            git push
+          else
+            echo "No changes to commit."
+          fi

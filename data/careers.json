@@ -1,0 +1,114 @@
+{
+  "generatedAt": "2026-04-29T00:00:00.000Z",
+  "count": 4,
+  "roles": [
+    {
+      "id": 1,
+      "slug": "senior-full-stack-engineer",
+      "title": "Senior Full-Stack Engineer",
+      "team": "Platform Engineering",
+      "seniority": "Senior",
+      "location": "Remote / Dubai / Doha",
+      "type": "Full-time",
+      "salary": "",
+      "summary": "Build and own production systems that run hospitals, refineries, and exchanges. You'll ship end-to-end features in React + Node/Laravel and pair with architects to evolve our platform standards.",
+      "responsibilities": [
+        "Design and ship production features in React + Node/Laravel",
+        "Own end-to-end delivery of mission-critical modules",
+        "Pair with architects to evolve platform standards",
+        "Code review and mentor mid-level engineers"
+      ],
+      "requirements": [
+        "5+ years building production web applications",
+        "Strong TypeScript, React, and Node.js (or PHP/Laravel)",
+        "Comfort with cloud infra (AWS or Azure)",
+        "Bias toward simple, observable, well-tested systems"
+      ],
+      "applyEmail": "careers@nanoxtech.ai",
+      "postedAt": "2026-04-01T00:00:00.000Z",
+      "updatedAt": "2026-04-29T00:00:00.000Z",
+      "url": "https://github.com/saadmsft/nanox-technologies/issues"
+    },
+    {
+      "id": 2,
+      "slug": "solution-architect",
+      "title": "Solution Architect",
+      "team": "Solution Architecture",
+      "seniority": "Senior",
+      "location": "Remote / Dubai / Doha",
+      "type": "Full-time",
+      "salary": "",
+      "summary": "Lead architecture for multi-year enterprise programs. Translate ambiguous business problems into clear, defensible technical designs across cloud, data, and integration.",
+      "responsibilities": [
+        "Lead architecture for multi-year enterprise programs",
+        "Run discovery, design reviews, and technical workshops with clients",
+        "Define non-functional requirements: scale, security, compliance, observability",
+        "Set platform standards and shepherd them through delivery"
+      ],
+      "requirements": [
+        "8+ years in software engineering with 3+ as architect",
+        "Deep cloud experience (AWS or Azure) at enterprise scale",
+        "Experience in regulated industries (healthcare, finance, energy, gov)",
+        "Strong written and verbal communication with executive audiences"
+      ],
+      "applyEmail": "careers@nanoxtech.ai",
+      "postedAt": "2026-04-01T00:00:00.000Z",
+      "updatedAt": "2026-04-29T00:00:00.000Z",
+      "url": "https://github.com/saadmsft/nanox-technologies/issues"
+    },
+    {
+      "id": 3,
+      "slug": "devops-sre-engineer",
+      "title": "DevOps / SRE Engineer",
+      "team": "DevOps / SRE",
+      "seniority": "Senior",
+      "location": "Remote / Dubai / Doha",
+      "type": "Full-time",
+      "salary": "",
+      "summary": "Own the reliability and delivery pipelines for systems where downtime is not an option. Build the platform that engineers ship on every day.",
+      "responsibilities": [
+        "Design and operate CI/CD pipelines across multiple client environments",
+        "Own observability: metrics, logs, traces, alerts, runbooks",
+        "Lead incident response and post-incident reviews",
+        "Harden production: SLOs, error budgets, security baselines"
+      ],
+      "requirements": [
+        "5+ years in DevOps, SRE, or platform engineering",
+        "Production experience with Kubernetes, Terraform, and at least one major cloud",
+        "Strong scripting (Python or Go) and Linux fundamentals",
+        "Experience with regulated workloads is a plus"
+      ],
+      "applyEmail": "careers@nanoxtech.ai",
+      "postedAt": "2026-04-01T00:00:00.000Z",
+      "updatedAt": "2026-04-29T00:00:00.000Z",
+      "url": "https://github.com/saadmsft/nanox-technologies/issues"
+    },
+    {
+      "id": 4,
+      "slug": "ai-ml-engineer",
+      "title": "AI / ML Engineer",
+      "team": "Data & AI",
+      "seniority": "Senior",
+      "location": "Remote / Dubai / Doha",
+      "type": "Full-time",
+      "salary": "",
+      "summary": "Design and ship LLM-powered features that hold up in production: RAG pipelines, evaluation harnesses, and agentic workflows for enterprise systems.",
+      "responsibilities": [
+        "Design RAG and retrieval pipelines over private enterprise data",
+        "Build evaluation harnesses and quality gates for LLM features",
+        "Productionize agentic workflows with proper guardrails and observability",
+        "Collaborate with platform engineers on cost and latency"
+      ],
+      "requirements": [
+        "Production experience shipping LLM features end-to-end",
+        "Comfort with Python, vector stores, and at least one major LLM SDK",
+        "Strong evaluation discipline (offline + online metrics)",
+        "Healthy skepticism about model output and clear thinking on guardrails"
+      ],
+      "applyEmail": "careers@nanoxtech.ai",
+      "postedAt": "2026-04-01T00:00:00.000Z",
+      "updatedAt": "2026-04-29T00:00:00.000Z",
+      "url": "https://github.com/saadmsft/nanox-technologies/issues"
+    }
+  ]
+}

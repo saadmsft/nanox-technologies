@@ -1,0 +1,126 @@
+name: Job posting
+description: Add a new open role to the Nanox careers page
+title: "[Role] "
+labels: [job-posting]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in the fields below. The role goes live on the careers page within ~1 minute of opening this issue.
+        Close the issue to remove the role. Re-open to republish. Edit anytime to update the listing.
+
+  - type: input
+    id: title
+    attributes:
+      label: Job title
+      description: e.g. "Senior Full-Stack Engineer"
+      placeholder: Senior Full-Stack Engineer
+    validations:
+      required: true
+
+  - type: dropdown
+    id: team
+    attributes:
+      label: Team
+      options:
+        - Platform Engineering
+        - Solution Architecture
+        - DevOps / SRE
+        - Data & AI
+        - Frontend
+        - Backend
+        - Security
+        - Operations
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: seniority
+    attributes:
+      label: Seniority
+      options:
+        - Junior
+        - Mid
+        - Senior
+        - Staff
+        - Principal
+        - Lead
+    validations:
+      required: true
+
+  - type: dropdown
+    id: location
+    attributes:
+      label: Location
+      options:
+        - Remote
+        - Dubai
+        - Doha
+        - Remote / Dubai / Doha
+        - Hybrid – Dubai
+        - Hybrid – Doha
+        - On-site Dubai
+        - On-site Doha
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Employment type
+      options:
+        - Full-time
+        - Contract
+        - Part-time
+        - Internship
+    validations:
+      required: true
+
+  - type: input
+    id: salary
+    attributes:
+      label: Salary range (optional)
+      description: e.g. "USD 90k–130k" — leave blank to hide
+      placeholder: ""
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: One-paragraph summary
+      description: 2–4 sentences. What you'll do and why it matters.
+      placeholder: We're hiring a Senior Full-Stack Engineer to build...
+    validations:
+      required: true
+
+  - type: textarea
+    id: responsibilities
+    attributes:
+      label: What you'll do
+      description: One bullet per line. No leading dashes — just plain lines.
+      placeholder: |
+        Design and ship production features in React + Node
+        Own end-to-end delivery of mission-critical modules
+        Pair with architects to evolve platform standards
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: What we're looking for
+      description: One bullet per line. No leading dashes.
+      placeholder: |
+        5+ years building production web apps
+        Strong TypeScript and Node.js
+        Comfort with cloud infra (AWS or Azure)
+    validations:
+      required: true
+
+  - type: input
+    id: applyEmail
+    attributes:
+      label: Apply email
+      value: careers@nanoxtech.ai
+    validations:
+      required: true
