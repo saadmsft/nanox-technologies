@@ -1713,3 +1713,110 @@ p  { color: var(--fg); }
   body { background: #fff; color: #000; }
   body::before { display: none; }
 }
+
+/* -------------------------------------------------------------
+   26. NANOX.HEALTH SISTER-SITE CTA
+   ------------------------------------------------------------- */
+.btn-health {
+  --health-teal:    #14B8A6;
+  --health-teal-2:  #0D9488;
+  --health-mint:    #5EEAD4;
+  --health-ink:     #03110F;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem 1rem 1.5rem;
+  border-radius: 14px;
+  background:
+    linear-gradient(135deg, #051A17 0%, #0A2A26 45%, #0D3B36 100%);
+  border: 1px solid rgba(94, 234, 212, 0.35);
+  color: #ECFEFA;
+  text-decoration: none;
+  font-family: var(--font-sans);
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow:
+    0 1px 0 rgba(94, 234, 212, 0.18) inset,
+    0 0 0 0 rgba(20, 184, 166, 0),
+    0 12px 32px rgba(3, 17, 15, 0.45);
+  transition: transform var(--dur) var(--ease-out),
+              box-shadow var(--dur) var(--ease-out),
+              border-color var(--dur) var(--ease-out);
+}
+.btn-health:hover {
+  transform: translateY(-2px);
+  border-color: rgba(94, 234, 212, 0.65);
+  box-shadow:
+    0 1px 0 rgba(94, 234, 212, 0.25) inset,
+    0 0 0 4px rgba(20, 184, 166, 0.15),
+    0 18px 48px rgba(3, 17, 15, 0.55),
+    0 0 60px rgba(20, 184, 166, 0.25);
+  color: #fff;
+}
+.btn-health:focus-visible {
+  outline: 2px solid var(--health-mint);
+  outline-offset: 3px;
+}
+.btn-health-glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background:
+    radial-gradient(60% 90% at 0% 50%, rgba(20, 184, 166, 0.45), transparent 60%),
+    radial-gradient(50% 80% at 100% 50%, rgba(94, 234, 212, 0.30), transparent 60%);
+  opacity: 0.55;
+  filter: blur(8px);
+  z-index: -1;
+  transition: opacity var(--dur) var(--ease-out);
+}
+.btn-health:hover .btn-health-glow { opacity: 0.95; }
+.btn-health-pulse {
+  position: relative;
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--health-mint);
+  box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.6);
+  animation: btnHealthPulse 2.2s ease-out infinite;
+}
+@keyframes btnHealthPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0.7); }
+  70%  { box-shadow: 0 0 0 14px rgba(94, 234, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(94, 234, 212, 0); }
+}
+.btn-health-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  text-align: left;
+  line-height: 1.25;
+}
+.btn-health-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--health-mint);
+}
+.btn-health-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  color: #F0FDFA;
+}
+.btn-health-arrow {
+  margin-left: auto;
+  color: var(--health-mint);
+  transition: transform var(--dur) var(--ease-out);
+}
+.btn-health:hover .btn-health-arrow { transform: translateX(4px); }
+
+@media (max-width: 640px) {
+  .btn-health { padding: 0.9rem 1rem; gap: 0.75rem; }
+  .btn-health-title { font-size: 0.95rem; }
+}
