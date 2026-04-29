@@ -1,28 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nanox Technologies - Enterprise Platform Engineering + AI</title>
+  <title>Nanox Technologies — Enterprise Platform Engineering + AI</title>
   <meta name="description" content="We help CEOs and product leaders turn complex operations into secure, scalable software — strategy, architecture, engineering, and long-term reliability.">
+  <meta name="theme-color" content="#07091A" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAFAFC" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://nanoxtech.ai/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nanox Technologies">
+  <meta property="og:title" content="Nanox Technologies — Enterprise Platform Engineering + AI">
+  <meta property="og:description" content="Multi-year, mission-critical builds. Architecture-led delivery from discovery to scale.">
+  <meta property="og:url" content="https://nanoxtech.ai/">
+  <meta property="og:image" content="https://nanoxtech.ai/assets/nanox-logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nanox Technologies — Enterprise Platform Engineering + AI">
+  <meta name="twitter:description" content="Multi-year, mission-critical builds. Architecture-led delivery from discovery to scale.">
+  <meta name="twitter:image" content="https://nanoxtech.ai/assets/nanox-logo.png">
+
+  <!-- Icons / manifest -->
   <link rel="icon" type="image/png" href="assets/nanox-logo.png">
+  <link rel="apple-touch-icon" href="assets/nanox-logo.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Anti-FOUC theme bootstrap -->
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('nanox-theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        var theme = s || (prefersLight ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (_) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Plausible (cookieless) -->
+  <script defer data-domain="nanoxtech.ai" src="https://plausible.io/js/script.js"></script>
+
+  <!-- JSON-LD: Organization + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://nanoxtech.ai/#org",
+        "name": "Nanox Technologies",
+        "url": "https://nanoxtech.ai/",
+        "logo": "https://nanoxtech.ai/assets/nanox-logo.png",
+        "description": "Enterprise Platform Engineering + AI consultancy. Multi-year, mission-critical builds for healthcare, energy, fintech, and government.",
+        "email": "support@nanoxtech.ai",
+        "sameAs": [
+          "https://www.linkedin.com/company/nanox-technologies"
+        ],
+        "address": [
+          {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
+          {"@type": "PostalAddress", "addressLocality": "Doha", "addressCountry": "QA"}
+        ],
+        "knowsAbout": ["Platform Engineering", "Solution Architecture", "AI Enablement", "Cloud DevOps", "Data Engineering"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://nanoxtech.ai/#site",
+        "url": "https://nanoxtech.ai/",
+        "name": "Nanox Technologies",
+        "publisher": {"@id": "https://nanoxtech.ai/#org"}
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://nanoxtech.ai/#service",
+        "name": "Nanox Technologies",
+        "areaServed": ["AE", "QA", "Worldwide"],
+        "serviceType": [
+          "Product Strategy & Discovery",
+          "Solution Architecture & System Design",
+          "Platform & Application Engineering",
+          "Data Engineering & Analytics",
+          "AI Enablement",
+          "Cloud, DevOps & Reliability",
+          "Security, Compliance & Governance"
+        ],
+        "provider": {"@id": "https://nanoxtech.ai/#org"}
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Announcement Bar -->
-  <div class="announcement-bar">
+  <div class="announcement-bar" role="region" aria-label="Site announcement">
     <div class="container-wide">
-      <svg class="icon icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+      <svg class="icon icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
       <p>
-        <strong>Web Summit Qatar 2026</strong>
-        <span class="hidden sm:inline"> (Doha, Feb 1–4) — Book a 15‑min architecture consult.</span>
+        <strong>GITEX GLOBAL 2026</strong>
+        <span class="hidden sm:inline"> · Dubai, Dec 7–11 — book a 15‑min architecture consult.</span>
       </p>
-      <a href="contact.html" class="btn btn-secondary btn-sm announcement-cta">Book a Call</a>
+      <a href="contact.html" class="btn btn-sm announcement-cta">Book a Call</a>
       <button class="close-btn" aria-label="Dismiss announcement">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </button>
     </div>
   </div>
@@ -30,46 +120,48 @@
   <!-- Header -->
   <header class="header transparent">
     <div class="container-wide">
-      <a href="index.html" class="logo">
-        <img src="assets/nanox-logo.png" alt="Nanox Technologies" style="height: 10rem; width: auto;">
+      <a href="index.html" class="logo" aria-label="Nanox Technologies — home">
+        <img src="assets/nanox-logo.png" alt="Nanox Technologies">
       </a>
 
-      <nav>
+      <nav aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#case-studies">Work</a>
         <a href="#industries">Industries</a>
         <a href="#process">How We Deliver</a>
-        <a href="#about">About</a>
+        <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
       </nav>
 
       <div class="cta-desktop">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">
+          <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/></svg>
+        </button>
         <a href="contact.html" class="btn btn-primary">Book a Call</a>
       </div>
 
-      <button class="btn btn-ghost btn-icon mobile-menu-btn" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <button class="btn btn-ghost btn-icon mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay"></div>
-
   <!-- Mobile Menu -->
-  <div class="mobile-menu">
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" aria-hidden="true">
     <button class="close-btn" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
     <a href="index.html" class="logo">
       <img src="assets/nanox-logo.png" alt="Nanox Technologies">
     </a>
-    <nav>
+    <nav aria-label="Mobile">
       <a href="#services">Services</a>
       <a href="#case-studies">Work</a>
       <a href="#industries">Industries</a>
       <a href="#process">How We Deliver</a>
-      <a href="#about">About</a>
+      <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="cta">
@@ -77,307 +169,292 @@
     </div>
   </div>
 
-  <main>
-    <!-- Hero Section -->
+  <main id="main">
+    <!-- Hero -->
     <section class="hero">
-      <div class="bg-gradient"></div>
+      <div class="bg-gradient" aria-hidden="true"></div>
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
       <div class="container-wide">
         <div class="content">
-          <h1 class="fade-up">
-            Enterprise platforms, <span class="highlight">built end‑to‑end.</span>
+          <span class="eyebrow fade-up">Enterprise Platform Engineering + AI</span>
+          <h1 class="fade-up delay-1">
+            Enterprise platforms,<br>
+            <span class="highlight">built end-to-end.</span>
           </h1>
-          <p class="subtitle fade-up" style="transition-delay: 0.1s;">
-            We help CEOs and product leaders turn complex operations into secure, scalable software — strategy, architecture, engineering, and long‑term reliability.
+          <p class="subtitle fade-up delay-2">
+            We help CEOs and product leaders turn complex operations into secure, scalable software — strategy, architecture, engineering, and long-term reliability.
           </p>
-          <div class="features fade-up" style="transition-delay: 0.2s;">
+          <div class="features fade-up delay-3">
             <div class="feature-item">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
-              <span>Multi‑year, mission‑critical builds (not brochure websites)</span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+              <span>Multi-year, mission-critical builds</span>
             </div>
             <div class="feature-item">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-              <span>Built for scale, compliance, and real-world operations</span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
+              <span>Built for scale, compliance, real-world ops</span>
             </div>
             <div class="feature-item">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Full squads: backend, frontend, DevOps, data, and AI</span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>Full squads: backend, frontend, DevOps, data, AI</span>
             </div>
           </div>
-          <div class="cta-buttons fade-up" style="transition-delay: 0.3s;">
+          <div class="cta-buttons fade-up delay-4">
             <a href="contact.html" class="btn btn-primary btn-lg">
               Talk to an Architect
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
             <a href="#case-studies" class="btn btn-outline btn-lg">View Case Studies</a>
           </div>
-          <p class="trust-text fade-in" style="transition-delay: 0.4s;">
-            From healthcare systems to enterprise workforce platforms to high‑throughput fintech infrastructure.
+          <p class="trust-text fade-in delay-5">
+            From healthcare systems to enterprise workforce platforms to high-throughput fintech infrastructure.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- Social Proof Section -->
+    <!-- Social Proof -->
     <section class="social-proof section-padding" id="about">
       <div class="container-wide">
         <div class="section-header fade-up">
-          <h2>Trusted in high‑stakes environments</h2>
+          <span class="eyebrow">Trust</span>
+          <h2>Trusted in high-stakes environments</h2>
           <p>We partner with organizations where failure is not an option.</p>
         </div>
         <div class="grid">
-          <div class="card fade-up" style="transition-delay: 0s;">
+          <div class="card fade-up">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
             <h3>Global energy & industrial enterprise</h3>
-            <p>Mission-critical operations at scale</p>
+            <p>Mission-critical operations at scale.</p>
           </div>
-          <div class="card fade-up" style="transition-delay: 0.1s;">
+          <div class="card fade-up delay-1">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
             </div>
             <h3>National-scale healthcare platforms</h3>
-            <p>Patient care and clinical workflows</p>
+            <p>Patient care and clinical workflows.</p>
           </div>
-          <div class="card fade-up" style="transition-delay: 0.2s;">
+          <div class="card fade-up delay-2">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
             </div>
-            <h3>High‑volume fintech & digital assets</h3>
-            <p>Secure, high-throughput transactions</p>
+            <h3>High-volume fintech & digital assets</h3>
+            <p>Secure, high-throughput transactions.</p>
           </div>
-          <div class="card fade-up" style="transition-delay: 0.3s;">
+          <div class="card fade-up delay-3">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
             </div>
             <h3>Marketplace & logistics operators</h3>
-            <p>Complex multi-party coordination</p>
+            <p>Complex multi-party coordination.</p>
           </div>
         </div>
-        <p class="footnote fade-in" style="transition-delay: 0.5s;">
+        <p class="footnote fade-in delay-4">
           Selected references available on request (subject to NDA).
         </p>
       </div>
     </section>
 
-    <!-- What We Build Section -->
+    <!-- What We Build -->
     <section class="what-we-build section-padding">
       <div class="container-wide">
         <div class="section-header fade-up">
-          <h2>What we build</h2>
-          <p>Platforms that run operations — not just websites.</p>
+          <span class="eyebrow">What We Build</span>
+          <h2>Platforms that run operations</h2>
+          <p>Not just websites — secure, mission-critical software systems.</p>
         </div>
         <div class="grid">
-          <div class="card fade-up" style="transition-delay: 0s;">
+          <div class="card fade-up">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
             </div>
             <h3>Enterprise Operations Platforms</h3>
             <p>Patient journeys, workforce systems, approvals, inventory, scheduling, billing, audit trails, multi-role portals.</p>
           </div>
-          <div class="card fade-up" style="transition-delay: 0.15s;">
+          <div class="card fade-up delay-1">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
             </div>
             <h3>Data & Intelligence Layers</h3>
             <p>Unified data models, analytics dashboards, reporting, automation, role-based insights, and decision support.</p>
           </div>
-          <div class="card fade-up" style="transition-delay: 0.3s;">
+          <div class="card fade-up delay-2">
             <div class="icon-wrapper">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
             </div>
             <h3>AI-Enabled Workflows</h3>
             <p>Document automation, internal copilots, knowledge search, customer support automation, and LLM features with governance.</p>
           </div>
         </div>
-        <p class="footnote fade-in" style="transition-delay: 0.5s;">
+        <p class="footnote fade-in delay-3">
           Delivered as secure web apps, mobile apps, APIs, and integrations — whatever the system needs.
         </p>
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section class="services section-padding" id="services">
       <div class="container-wide">
         <div class="section-header fade-up">
-          <h2>Services</h2>
-          <p>Architecture-led delivery from idea to production.</p>
+          <span class="eyebrow">Services</span>
+          <h2>Architecture-led delivery</h2>
+          <p>From idea to production — seven disciplines, one team.</p>
         </div>
-        <div class="accordion-container fade-up" style="transition-delay: 0.2s;">
-          <!-- Service 1 -->
+        <div class="accordion-container fade-up delay-1">
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div>
                 <span class="title">Product Strategy & Discovery</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>We align stakeholders, define the real problem, map workflows, and turn ideas into a buildable roadmap.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> Requirements + process mapping (as-is / to-be)</li>
-                <li><span class="bullet">•</span> PRD + roadmap (phased releases)</li>
-                <li><span class="bullet">•</span> Risk & dependency plan</li>
-                <li><span class="bullet">•</span> Budget + timeline ranges</li>
+                <li><span class="bullet">·</span> Requirements + process mapping (as-is / to-be)</li>
+                <li><span class="bullet">·</span> PRD + roadmap (phased releases)</li>
+                <li><span class="bullet">·</span> Risk & dependency plan</li>
+                <li><span class="bullet">·</span> Budget + timeline ranges</li>
               </ul>
             </div>
           </div>
-          <!-- Service 2 -->
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></div>
                 <span class="title">Solution Architecture & System Design</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>We design the full blueprint: roles, modules, integrations, data model, security, scalability, and reliability targets.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> System architecture diagrams</li>
-                <li><span class="bullet">•</span> Data model + API contracts</li>
-                <li><span class="bullet">•</span> Security model (RBAC, audit logs, encryption)</li>
-                <li><span class="bullet">•</span> Scalability & uptime plan</li>
+                <li><span class="bullet">·</span> System architecture diagrams</li>
+                <li><span class="bullet">·</span> Data model + API contracts</li>
+                <li><span class="bullet">·</span> Security model (RBAC, audit logs, encryption)</li>
+                <li><span class="bullet">·</span> Scalability & uptime plan</li>
               </ul>
             </div>
           </div>
-          <!-- Service 3 -->
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></div>
                 <span class="title">Platform & Application Engineering</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>Full-stack engineering squads that build clean, maintainable systems — tested, reviewed, and production-ready.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> Web apps, admin portals, dashboards</li>
-                <li><span class="bullet">•</span> Backend services + APIs</li>
-                <li><span class="bullet">•</span> Integrations (payments, ERP, CRM, identity)</li>
-                <li><span class="bullet">•</span> Automated testing + QA process</li>
+                <li><span class="bullet">·</span> Web apps, admin portals, dashboards</li>
+                <li><span class="bullet">·</span> Backend services + APIs</li>
+                <li><span class="bullet">·</span> Integrations (payments, ERP, CRM, identity)</li>
+                <li><span class="bullet">·</span> Automated testing + QA process</li>
               </ul>
             </div>
           </div>
-          <!-- Service 4 -->
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
                 <span class="title">Data Engineering & Analytics</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>We build data pipelines and analytics that leaders actually use.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> ETL/ELT pipelines</li>
-                <li><span class="bullet">•</span> Reporting + BI dashboards</li>
-                <li><span class="bullet">•</span> Event tracking + product analytics</li>
-                <li><span class="bullet">•</span> Data quality monitoring</li>
+                <li><span class="bullet">·</span> ETL/ELT pipelines</li>
+                <li><span class="bullet">·</span> Reporting + BI dashboards</li>
+                <li><span class="bullet">·</span> Event tracking + product analytics</li>
+                <li><span class="bullet">·</span> Data quality monitoring</li>
               </ul>
             </div>
           </div>
-          <!-- Service 5 -->
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg></div>
                 <span class="title">AI Enablement (GenAI + Automation)</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>Add AI where it drives measurable outcomes — with guardrails.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> RAG-based internal knowledge assistants</li>
-                <li><span class="bullet">•</span> Document processing + extraction</li>
-                <li><span class="bullet">•</span> Workflow automation + agents</li>
-                <li><span class="bullet">•</span> Evaluation, monitoring, and safety controls</li>
+                <li><span class="bullet">·</span> RAG-based internal knowledge assistants</li>
+                <li><span class="bullet">·</span> Document processing + extraction</li>
+                <li><span class="bullet">·</span> Workflow automation + agents</li>
+                <li><span class="bullet">·</span> Evaluation, monitoring, and safety controls</li>
               </ul>
             </div>
           </div>
-          <!-- Service 6 -->
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></div>
                 <span class="title">Cloud, DevOps & Reliability (SRE)</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>Ship faster with stable infrastructure and real observability.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> CI/CD pipelines</li>
-                <li><span class="bullet">•</span> Infrastructure as code</li>
-                <li><span class="bullet">•</span> Monitoring + alerting</li>
-                <li><span class="bullet">•</span> Cost optimization</li>
+                <li><span class="bullet">·</span> CI/CD pipelines</li>
+                <li><span class="bullet">·</span> Infrastructure as code</li>
+                <li><span class="bullet">·</span> Monitoring + alerting</li>
+                <li><span class="bullet">·</span> Cost optimization</li>
               </ul>
             </div>
           </div>
-          <!-- Service 7 -->
           <div class="accordion-item">
             <button class="accordion-trigger">
               <div class="trigger-content">
-                <div class="icon-wrapper">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-                </div>
+                <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg></div>
                 <span class="title">Security, Compliance & Governance</span>
               </div>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
               <p>Secure-by-design systems for regulated and enterprise environments.</p>
-              <p class="deliverables-title">Deliverables:</p>
+              <p class="deliverables-title">Deliverables</p>
               <ul>
-                <li><span class="bullet">•</span> Threat modeling + security reviews</li>
-                <li><span class="bullet">•</span> Audit trails + access controls</li>
-                <li><span class="bullet">•</span> Data retention + logging</li>
-                <li><span class="bullet">•</span> Compliance-aligned engineering practices</li>
+                <li><span class="bullet">·</span> Threat modeling + security reviews</li>
+                <li><span class="bullet">·</span> Audit trails + access controls</li>
+                <li><span class="bullet">·</span> Data retention + logging</li>
+                <li><span class="bullet">·</span> Compliance-aligned engineering practices</li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="cta fade-up" style="transition-delay: 0.4s;">
+        <div class="cta fade-up delay-2">
           <a href="contact.html" class="btn btn-primary btn-lg">
             Request a proposal
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Case Studies Section -->
+    <!-- Case Studies -->
     <section class="case-studies section-padding" id="case-studies">
       <div class="container-wide">
         <div class="section-header fade-up">
+          <span class="eyebrow">Selected Work</span>
           <h2>Proof at scale</h2>
           <p>A few examples of the kinds of systems we deliver.</p>
         </div>
         <div class="grid">
-          <!-- Case Study 1 -->
-          <article class="card fade-up" style="transition-delay: 0s;">
+          <article class="card fade-up">
             <div class="card-content">
               <span class="badge">Healthcare</span>
               <h3>Multi-role healthcare platform for patients, clinicians, and pharmacies</h3>
@@ -388,9 +465,9 @@
               <div class="card-section">
                 <p class="label">What we built</p>
                 <ul>
-                  <li><span class="bullet">•</span> Patient portal + provider dashboards</li>
-                  <li><span class="bullet">•</span> Scheduling, billing, and receipts workflows</li>
-                  <li><span class="bullet">•</span> Pharmacy/prescription flows + notifications</li>
+                  <li><span class="bullet">·</span> Patient portal + provider dashboards</li>
+                  <li><span class="bullet">·</span> Scheduling, billing, and receipts workflows</li>
+                  <li><span class="bullet">·</span> Pharmacy/prescription flows + notifications</li>
                 </ul>
               </div>
               <div class="card-section">
@@ -398,14 +475,13 @@
               </div>
               <div class="card-footer">
                 <a href="case-study-healthcare.html">
-                  View details
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  View case study
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
           </article>
-          <!-- Case Study 2 -->
-          <article class="card fade-up" style="transition-delay: 0.15s;">
+          <article class="card fade-up delay-1">
             <div class="card-content">
               <span class="badge">Energy</span>
               <h3>Workforce operations platform for a global energy enterprise</h3>
@@ -416,21 +492,20 @@
               <div class="card-section">
                 <p class="label">What we built</p>
                 <ul>
-                  <li><span class="bullet">•</span> Employee profiles, onboarding, and role management</li>
-                  <li><span class="bullet">•</span> Travel requests/approvals + policy enforcement</li>
-                  <li><span class="bullet">•</span> Accommodation/room allocation workflows</li>
+                  <li><span class="bullet">·</span> Employee profiles, onboarding, and role management</li>
+                  <li><span class="bullet">·</span> Travel requests/approvals + policy enforcement</li>
+                  <li><span class="bullet">·</span> Accommodation/room allocation workflows</li>
                 </ul>
               </div>
               <div class="card-footer">
                 <a href="case-study-workforce.html">
-                  View details
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  View case study
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
           </article>
-          <!-- Case Study 3 -->
-          <article class="card fade-up" style="transition-delay: 0.3s;">
+          <article class="card fade-up delay-2">
             <div class="card-content">
               <span class="badge">Fintech</span>
               <h3>Trading platform infrastructure built for performance and security</h3>
@@ -441,15 +516,15 @@
               <div class="card-section">
                 <p class="label">What we built</p>
                 <ul>
-                  <li><span class="bullet">•</span> Secure authentication + permissions</li>
-                  <li><span class="bullet">•</span> Wallet/ledger-style transaction tracking</li>
-                  <li><span class="bullet">•</span> Admin risk controls + monitoring dashboards</li>
+                  <li><span class="bullet">·</span> Secure authentication + permissions</li>
+                  <li><span class="bullet">·</span> Wallet/ledger-style transaction tracking</li>
+                  <li><span class="bullet">·</span> Admin risk controls + monitoring dashboards</li>
                 </ul>
               </div>
               <div class="card-footer">
                 <a href="case-study-fintech.html">
-                  View details
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  View case study
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
               </div>
             </div>
@@ -458,14 +533,15 @@
       </div>
     </section>
 
-    <!-- Industries Section -->
+    <!-- Industries -->
     <section class="industries section-padding" id="industries">
       <div class="container-wide">
         <div class="section-header fade-up">
-          <h2>Cross‑industry delivery</h2>
+          <span class="eyebrow">Industries</span>
+          <h2>Cross-industry delivery</h2>
           <p>We don't "template" — we engineer to your workflows.</p>
         </div>
-        <div class="tags fade-up" style="transition-delay: 0.2s;">
+        <div class="tags fade-up delay-1">
           <span class="tag">Healthcare & Life Sciences</span>
           <span class="tag">Energy & Industrial</span>
           <span class="tag">Fintech & Payments</span>
@@ -475,28 +551,26 @@
           <span class="tag">SaaS & B2B Platforms</span>
           <span class="tag">Web3 & Digital Assets</span>
         </div>
-        <p class="footnote fade-in" style="transition-delay: 0.5s;">
+        <p class="footnote fade-in delay-3">
           If your workflow is complex, regulated, or high-scale — we're built for it.
         </p>
       </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- Process -->
     <section class="process section-padding" id="process">
       <div class="container-wide">
         <div class="section-header fade-up">
-          <h2>How we deliver</h2>
-          <p>Clear phases, measurable progress, and production-grade quality.</p>
+          <span class="eyebrow">How We Deliver</span>
+          <h2>Clear phases, measurable progress</h2>
+          <p>Production-grade quality at every step.</p>
         </div>
         <div class="timeline">
-          <div class="timeline-line"></div>
+          <div class="timeline-line" aria-hidden="true"></div>
           <div class="phases">
-            <!-- Phase 1 -->
-            <div class="phase fade-up" style="transition-delay: 0s;">
+            <div class="phase fade-up">
               <div class="phase-header">
-                <div class="phase-icon">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-                </div>
+                <div class="phase-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div>
                 <div class="phase-info">
                   <span class="phase-number">01</span>
                   <h3 class="phase-title">Discovery Sprint</h3>
@@ -510,12 +584,9 @@
                 <li>Architecture direction</li>
               </ul>
             </div>
-            <!-- Phase 2 -->
-            <div class="phase fade-up" style="transition-delay: 0.1s;">
+            <div class="phase fade-up delay-1">
               <div class="phase-header">
-                <div class="phase-icon">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
-                </div>
+                <div class="phase-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg></div>
                 <div class="phase-info">
                   <span class="phase-number">02</span>
                   <h3 class="phase-title">Blueprint</h3>
@@ -529,12 +600,9 @@
                 <li>Delivery plan</li>
               </ul>
             </div>
-            <!-- Phase 3 -->
-            <div class="phase fade-up" style="transition-delay: 0.2s;">
+            <div class="phase fade-up delay-2">
               <div class="phase-header">
-                <div class="phase-icon">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg>
-                </div>
+                <div class="phase-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0a2.12 2.12 0 0 1 0-3L12 9"/><path d="M17.64 15 22 10.64"/><path d="m20.91 11.7-1.25-1.25c-.6-.6-.93-1.4-.93-2.25v-.86L16.01 4.6a5.56 5.56 0 0 0-3.94-1.64H9l.92.82A6.18 6.18 0 0 1 12 8.4v1.56l2 2h2.47l2.26 1.91"/></svg></div>
                 <div class="phase-info">
                   <span class="phase-number">03</span>
                   <h3 class="phase-title">Build</h3>
@@ -548,12 +616,9 @@
                 <li>Documentation</li>
               </ul>
             </div>
-            <!-- Phase 4 -->
-            <div class="phase fade-up" style="transition-delay: 0.3s;">
+            <div class="phase fade-up delay-3">
               <div class="phase-header">
-                <div class="phase-icon">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
-                </div>
+                <div class="phase-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
                 <div class="phase-info">
                   <span class="phase-number">04</span>
                   <h3 class="phase-title">Launch</h3>
@@ -561,17 +626,14 @@
               </div>
               <ul class="phase-deliverables">
                 <li>Go-live plan</li>
-                <li>Monitoring and alerting</li>
+                <li>Monitoring & alerting</li>
                 <li>Performance tuning</li>
                 <li>Training + handover</li>
               </ul>
             </div>
-            <!-- Phase 5 -->
-            <div class="phase fade-up" style="transition-delay: 0.4s;">
+            <div class="phase fade-up delay-4">
               <div class="phase-header">
-                <div class="phase-icon">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                </div>
+                <div class="phase-icon"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
                 <div class="phase-info">
                   <span class="phase-number">05</span>
                   <h3 class="phase-title">Scale & Evolve</h3>
@@ -586,185 +648,162 @@
             </div>
           </div>
         </div>
-        <p class="footnote fade-in" style="transition-delay: 0.6s;">
+        <p class="footnote fade-in delay-5">
           We build like an internal product team — not like a "project shop."
         </p>
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
+    <!-- Tech Stack -->
     <section class="tech-stack section-padding">
       <div class="container-wide">
         <div class="section-header fade-up">
-          <h2>Engineering that fits your environment</h2>
-          <p>We work with modern stacks and integrate with enterprise systems.</p>
+          <span class="eyebrow">Engineering</span>
+          <h2>Built to fit your environment</h2>
+          <p>Modern stacks that integrate with enterprise systems.</p>
         </div>
-        <div class="grid fade-up" style="transition-delay: 0.2s;">
+        <div class="grid fade-up delay-1">
           <div class="category">
             <h3>Frontend</h3>
-            <ul>
-              <li>React</li>
-              <li>Next.js</li>
-              <li>Dashboards</li>
-              <li>Portals</li>
-            </ul>
+            <ul><li>React</li><li>Next.js</li><li>Dashboards</li><li>Portals</li></ul>
           </div>
           <div class="category">
             <h3>Backend</h3>
-            <ul>
-              <li>Node.js</li>
-              <li>PHP/Laravel</li>
-              <li>API-first services</li>
-            </ul>
+            <ul><li>Node.js</li><li>PHP/Laravel</li><li>API-first services</li></ul>
           </div>
           <div class="category">
             <h3>Data</h3>
-            <ul>
-              <li>MySQL</li>
-              <li>PostgreSQL</li>
-              <li>Caching + search</li>
-            </ul>
+            <ul><li>MySQL</li><li>PostgreSQL</li><li>Caching + search</li></ul>
           </div>
           <div class="category">
-            <h3>Cloud/DevOps</h3>
-            <ul>
-              <li>AWS/Azure</li>
-              <li>CI/CD</li>
-              <li>Containers</li>
-              <li>Monitoring</li>
-            </ul>
+            <h3>Cloud / DevOps</h3>
+            <ul><li>AWS / Azure</li><li>CI/CD</li><li>Containers</li><li>Monitoring</li></ul>
           </div>
           <div class="category">
             <h3>AI</h3>
-            <ul>
-              <li>LLM features</li>
-              <li>RAG</li>
-              <li>Automation pipelines</li>
-            </ul>
+            <ul><li>LLM features</li><li>RAG</li><li>Automation pipelines</li></ul>
           </div>
         </div>
-        <p class="footnote fade-in" style="transition-delay: 0.5s;">
+        <p class="footnote fade-in delay-2">
           We choose architecture based on uptime, security, and maintainability — not trends.
         </p>
       </div>
     </section>
 
-    <!-- Events Section -->
+    <!-- Events -->
     <section class="events section-padding">
       <div class="container-wide">
         <div class="section-header fade-up">
+          <span class="eyebrow">In Person</span>
           <h2>Meeting in Doha or Dubai?</h2>
           <p>We're connecting with founders and enterprise leaders across MENA in 2026.</p>
         </div>
         <div class="grid">
-          <!-- Event 1 -->
-          <div class="card highlight fade-up" style="transition-delay: 0s;">
+          <div class="card highlight fade-up">
             <div class="card-header">
-              <div class="icon-wrapper">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              </div>
+              <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
               <div>
-                <h3>Web Summit Qatar 2026</h3>
+                <h3>GITEX GLOBAL 2026</h3>
                 <p class="location">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Doha • Feb 1–4, 2026 (DECC)
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Dubai · Dec 7–11, 2026 (Expo City)
                 </p>
               </div>
             </div>
             <a href="contact.html" class="btn btn-primary btn-full">
-              Book a 15‑min meeting
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              Book a 15-min meeting
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
-          <!-- Event 2 -->
-          <div class="card fade-up" style="transition-delay: 0.15s;">
+          <div class="card fade-up delay-1">
             <div class="card-header">
-              <div class="icon-wrapper">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-              </div>
+              <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
               <div>
-                <h3>GITEX GLOBAL 2026</h3>
+                <h3>LEAP 2027</h3>
                 <p class="location">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Dubai • Dec 7–11, 2026 (Expo City)
+                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Riyadh · Feb 2027 (Malham)
                 </p>
               </div>
             </div>
             <a href="contact.html" class="btn btn-outline btn-full">
-              Join the GITEX list
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              Join the LEAP list
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
         </div>
-        <p class="footnote fade-in" style="transition-delay: 0.4s;">
+        <p class="footnote fade-in delay-2">
           Prefer remote? Book a call and we'll share relevant case studies.
         </p>
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ -->
     <section class="faq section-padding">
       <div class="container-wide">
         <div class="section-header fade-up">
+          <span class="eyebrow">FAQ</span>
           <h2>Questions CEOs ask us</h2>
           <p>Answers to the questions we hear most often from enterprise leaders.</p>
         </div>
-        <div class="accordion-container fade-up" style="transition-delay: 0.2s;">
+        <div class="accordion-container fade-up delay-1">
           <div class="accordion-item">
             <button class="accordion-trigger">
               <span class="question">Are you an agency or a long-term engineering partner?</span>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
-              We operate as a dedicated product team. Many of our systems are multi-year programs with ongoing evolution and support.
+              <p>We operate as a dedicated product team. Many of our systems are multi-year programs with ongoing evolution and support.</p>
             </div>
           </div>
           <div class="accordion-item">
             <button class="accordion-trigger">
               <span class="question">Can you work with our internal team?</span>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
-              Yes — we can lead architecture and delivery, or integrate with your engineers through clear ownership, code review, and sprint rituals.
+              <p>Yes — we can lead architecture and delivery, or integrate with your engineers through clear ownership, code review, and sprint rituals.</p>
             </div>
           </div>
           <div class="accordion-item">
             <button class="accordion-trigger">
               <span class="question">How do you manage quality?</span>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
-              Automated testing, PR reviews, QA gates, staging environments, observability, and release discipline — the same standards you'd expect from top internal teams.
+              <p>Automated testing, PR reviews, QA gates, staging environments, observability, and release discipline — the same standards you'd expect from top internal teams.</p>
             </div>
           </div>
           <div class="accordion-item">
             <button class="accordion-trigger">
               <span class="question">Can you handle security and compliance needs?</span>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
-              We design for least privilege, audit trails, encryption, logging, and secure SDLC practices. For regulated environments, we align engineering to your compliance requirements.
+              <p>We design for least privilege, audit trails, encryption, logging, and secure SDLC practices. For regulated environments, we align engineering to your compliance requirements.</p>
             </div>
           </div>
           <div class="accordion-item">
             <button class="accordion-trigger">
               <span class="question">What's the fastest way to start?</span>
-              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+              <svg class="chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </button>
             <div class="accordion-content">
-              A Discovery Sprint — we turn your idea into a blueprint, roadmap, and delivery plan you can execute immediately.
+              <p>A Discovery Sprint — we turn your idea into a blueprint, roadmap, and delivery plan you can execute immediately.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- Final CTA -->
     <section class="final-cta section-padding">
       <div class="container-wide">
         <div class="content fade-up">
+          <span class="eyebrow">Get Started</span>
           <h2>
-            Tell us what you're building. <span class="highlight">We'll blueprint it and ship it.</span>
+            Tell us what you're building.<br>
+            <span class="highlight">We'll blueprint it and ship it.</span>
           </h2>
           <p class="subtitle">
             If it's complex, regulated, or high-scale — we're the team you want.
@@ -772,10 +811,10 @@
           <div class="cta-buttons">
             <a href="contact.html" class="btn btn-primary btn-lg">
               Talk to an Architect
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
             <a href="mailto:support@nanoxtech.ai" class="btn btn-outline btn-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               Email us
             </a>
           </div>
@@ -788,22 +827,69 @@
   <footer class="footer">
     <div class="container-wide">
       <div class="main-content">
-        <a href="index.html" class="logo">
-          <img src="assets/nanox-logo.png" alt="Nanox Technologies">
-        </a>
-        <nav>
-          <a href="#services">Services</a>
-          <a href="#case-studies">Work</a>
-          <a href="#industries">Industries</a>
-          <a href="#about">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+        <div class="brand">
+          <a href="index.html" class="logo" aria-label="Nanox Technologies">
+            <img src="assets/nanox-logo.png" alt="Nanox Technologies">
+          </a>
+          <p>Enterprise platform engineering and AI for organizations where failure is not an option.</p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/company/nanox-technologies" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="mailto:support@nanoxtech.ai" aria-label="Email">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="index.html#services">Strategy & Discovery</a></li>
+            <li><a href="index.html#services">Solution Architecture</a></li>
+            <li><a href="index.html#services">Platform Engineering</a></li>
+            <li><a href="index.html#services">Data & AI</a></li>
+            <li><a href="index.html#services">Cloud & DevOps</a></li>
+            <li><a href="index.html#services">Security & Compliance</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="case-study-healthcare.html">Healthcare Platform</a></li>
+            <li><a href="case-study-workforce.html">Workforce Operations</a></li>
+            <li><a href="case-study-fintech.html">Fintech Trading</a></li>
+            <li><a href="index.html#industries">Industries</a></li>
+            <li><a href="index.html#process">How We Deliver</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="mailto:support@nanoxtech.ai">support@nanoxtech.ai</a></li>
+          </ul>
+          <p style="margin-top: 1rem;">Dubai · Doha · Remote</p>
+        </div>
       </div>
       <div class="bottom">
         <p>© 2026 Nanox Technologies. Enterprise Platform Engineering + AI.</p>
+        <div class="legal">
+          <a href="contact.html">Contact</a>
+          <a href="careers.html">Careers</a>
+        </div>
       </div>
     </div>
   </footer>
+
+  <!-- Cookie consent -->
+  <div class="cookie-banner" data-cookie-banner data-ga-id="YOUR_GA4_ID" role="dialog" aria-label="Cookie consent">
+    <p><strong>A note on cookies.</strong> We use privacy-friendly analytics by default. With your consent, we also use Google Analytics to understand site usage. You can change your choice anytime.</p>
+    <div class="actions">
+      <button class="btn btn-outline" data-consent-reject>Reject</button>
+      <button class="btn btn-primary" data-consent-accept>Accept</button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

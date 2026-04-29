@@ -1,189 +1,165 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Workforce Platform Case Study - Nanox Technologies</title>
-  <meta name="description" content="Workforce operations platform for a global energy enterprise">
+  <title>Workforce Operations — Nanox Technologies</title>
+  <meta name="description" content="Enterprise workforce & travel operations platform for a global energy enterprise. Multi-year delivery.">
+  <meta name="theme-color" content="#07091A" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAFAFC" media="(prefers-color-scheme: light)">
+  <link rel="canonical" href="https://nanoxtech.ai/case-study-workforce.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Enterprise Workforce & Travel Operations — Nanox Technologies">
+  <meta property="og:description" content="Workforce operations platform for a global energy enterprise.">
+  <meta property="og:url" content="https://nanoxtech.ai/case-study-workforce.html">
+  <meta property="og:image" content="https://nanoxtech.ai/assets/nanox-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" type="image/png" href="assets/nanox-logo.png">
+  <link rel="apple-touch-icon" href="assets/nanox-logo.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <script>
+    (function () {
+      try {
+        var s = localStorage.getItem('nanox-theme');
+        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        document.documentElement.setAttribute('data-theme', s || (prefersLight ? 'light' : 'dark'));
+      } catch (_) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script defer data-domain="nanoxtech.ai" src="https://plausible.io/js/script.js"></script>
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"Enterprise Workforce & Travel Operations","description":"Unified workforce management and travel operations platform for a global energy enterprise.","url":"https://nanoxtech.ai/case-study-workforce.html","image":"https://nanoxtech.ai/assets/nanox-logo.png","publisher":{"@type":"Organization","name":"Nanox Technologies","logo":{"@type":"ImageObject","url":"https://nanoxtech.ai/assets/nanox-logo.png"}}}
+  </script>
 </head>
 <body>
-  <!-- Header -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="header transparent">
     <div class="container-wide">
-      <a href="index.html" class="logo">
-        <img src="assets/nanox-logo.png" alt="Nanox Technologies">
-      </a>
-
-      <nav>
+      <a href="index.html" class="logo" aria-label="Nanox Technologies — home"><img src="assets/nanox-logo.png" alt="Nanox Technologies"></a>
+      <nav aria-label="Primary">
         <a href="index.html#services">Services</a>
         <a href="index.html#case-studies">Work</a>
         <a href="index.html#industries">Industries</a>
         <a href="index.html#process">How We Deliver</a>
-        <a href="index.html#about">About</a>
+        <a href="careers.html">Careers</a>
         <a href="contact.html">Contact</a>
       </nav>
-
       <div class="cta-desktop">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">
+          <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/></svg>
+        </button>
         <a href="contact.html" class="btn btn-primary">Book a Call</a>
       </div>
-
-      <button class="btn btn-ghost btn-icon mobile-menu-btn" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      <button class="btn btn-ghost btn-icon mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay"></div>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu">
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu" aria-hidden="true">
     <button class="close-btn" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
-    <a href="index.html" class="logo">
-      <img src="assets/nanox-logo.png" alt="Nanox Technologies">
-    </a>
-    <nav>
+    <a href="index.html" class="logo"><img src="assets/nanox-logo.png" alt="Nanox Technologies"></a>
+    <nav aria-label="Mobile">
       <a href="index.html#services">Services</a>
       <a href="index.html#case-studies">Work</a>
       <a href="index.html#industries">Industries</a>
       <a href="index.html#process">How We Deliver</a>
-      <a href="index.html#about">About</a>
+      <a href="careers.html">Careers</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <div class="cta">
-      <a href="contact.html" class="btn btn-primary btn-full">Book a Call</a>
-    </div>
+    <div class="cta"><a href="contact.html" class="btn btn-primary btn-full">Book a Call</a></div>
   </div>
 
-  <main>
+  <main id="main">
     <article class="case-study-page">
       <div class="container-wide">
-        <!-- Back link -->
         <a href="index.html#case-studies" class="back-link fade-up">
-          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-          Back to Case Studies
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          Back to case studies
         </a>
 
-        <!-- Header -->
-        <header class="fade-up" style="transition-delay: 0.1s;">
+        <header class="fade-up delay-1">
           <div class="meta">
             <span class="badge">Energy</span>
             <span class="timeline">Multi-year engagement</span>
           </div>
           <h1>Enterprise Workforce & Travel Operations</h1>
-          <p class="subtitle">Workforce operations platform for a global energy enterprise</p>
+          <p class="subtitle">Workforce operations platform for a global energy enterprise.</p>
         </header>
 
-        <!-- Content -->
         <div class="content-grid">
-          <!-- Main content -->
           <div class="main-content">
-            <!-- Problem -->
-            <section class="fade-up" style="transition-delay: 0.2s;">
+            <section class="fade-up delay-2">
               <h2>The Challenge</h2>
               <p>A global energy enterprise struggled with disconnected systems for employee management, travel approvals, accommodation, and operational coordination. Manual processes led to delays, compliance risks, and limited visibility for leadership.</p>
             </section>
 
-            <!-- Solution -->
-            <section class="fade-up" style="transition-delay: 0.3s;">
+            <section class="fade-up delay-3">
               <h2>What We Built</h2>
               <p>We delivered a unified operations platform that centralized workforce management and travel operations.</p>
               <ul>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Employee profiles with onboarding workflows and role management</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Travel request and approval system with policy enforcement</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Accommodation and room allocation workflows</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Real-time reporting dashboards for leadership visibility</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Integration with existing HR and ERP systems</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Mobile-first design for field workers</span>
-                </li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Employee profiles with onboarding workflows and role management</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Travel request and approval system with policy enforcement</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Accommodation and room allocation workflows</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Real-time reporting dashboards for leadership visibility</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Integration with existing HR and ERP systems</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Mobile-first design for field workers</span></li>
               </ul>
             </section>
 
-            <!-- Outcomes -->
-            <section class="fade-up" style="transition-delay: 0.4s;">
+            <section class="fade-up delay-4">
               <h2>Results</h2>
               <ul>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Faster approvals and fewer manual escalations</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Centralized visibility across departments</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Audit-ready operational records</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Reduced travel booking time by 70%</span>
-                </li>
-                <li>
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                  <span>Improved compliance with company travel policies</span>
-                </li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Faster approvals and fewer manual escalations</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Centralized visibility across departments</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Audit-ready operational records</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Reduced travel booking time by 70%</span></li>
+                <li><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Improved compliance with company travel policies</span></li>
               </ul>
             </section>
           </div>
 
-          <!-- Sidebar -->
-          <aside class="sidebar slide-in-right" style="transition-delay: 0.3s;">
-            <!-- Tech highlights -->
+          <aside class="sidebar slide-in-right delay-3">
             <div class="tech-highlights">
               <h3>Tech Highlights</h3>
               <ul>
-                <li><span class="bullet">•</span> React frontend with offline-capable PWA</li>
-                <li><span class="bullet">•</span> Laravel backend with RESTful APIs</li>
-                <li><span class="bullet">•</span> MySQL database with optimized queries</li>
-                <li><span class="bullet">•</span> Azure cloud infrastructure</li>
-                <li><span class="bullet">•</span> SSO integration with corporate identity provider</li>
+                <li><span class="bullet">·</span> React frontend with offline-capable PWA</li>
+                <li><span class="bullet">·</span> Laravel backend with RESTful APIs</li>
+                <li><span class="bullet">·</span> MySQL database with optimized queries</li>
+                <li><span class="bullet">·</span> Azure cloud infrastructure</li>
+                <li><span class="bullet">·</span> SSO integration with corporate identity provider</li>
               </ul>
             </div>
-
-            <!-- CTA -->
             <div class="sidebar-cta">
               <h3>Have a similar challenge?</h3>
               <p>Let's discuss how we can help you build a solution tailored to your needs.</p>
-              <a href="contact.html" class="btn btn-secondary btn-full">Talk to an Architect</a>
+              <a href="contact.html" class="btn btn-primary btn-full">Talk to an Architect</a>
             </div>
           </aside>
         </div>
 
-        <!-- Navigation -->
-        <nav class="navigation fade-up" style="transition-delay: 0.5s;">
+        <nav class="navigation fade-up delay-5" aria-label="Case study navigation">
           <div class="nav-links">
             <a href="case-study-healthcare.html">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
-              <span>National-scale Healthcare Platform</span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+              <span>Healthcare Platform</span>
             </a>
             <a href="case-study-fintech.html">
-              <span>High-Performance Trading Infrastructure</span>
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              <span>Fintech Trading Infrastructure</span>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </a>
           </div>
         </nav>
@@ -191,26 +167,28 @@
     </article>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container-wide">
       <div class="main-content">
-        <a href="index.html" class="logo">
-          <img src="assets/nanox-logo.png" alt="Nanox Technologies">
-        </a>
-        <nav>
-          <a href="index.html#services">Services</a>
-          <a href="index.html#case-studies">Work</a>
-          <a href="index.html#industries">Industries</a>
-          <a href="index.html#about">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+        <div class="brand">
+          <a href="index.html" class="logo" aria-label="Nanox Technologies"><img src="assets/nanox-logo.png" alt="Nanox Technologies"></a>
+          <p>Enterprise platform engineering and AI for organizations where failure is not an option.</p>
+        </div>
+        <div class="col"><h4>Services</h4><ul><li><a href="index.html#services">Strategy & Discovery</a></li><li><a href="index.html#services">Solution Architecture</a></li><li><a href="index.html#services">Platform Engineering</a></li><li><a href="index.html#services">Data & AI</a></li></ul></div>
+        <div class="col"><h4>Work</h4><ul><li><a href="case-study-healthcare.html">Healthcare Platform</a></li><li><a href="case-study-workforce.html">Workforce Operations</a></li><li><a href="case-study-fintech.html">Fintech Trading</a></li></ul></div>
+        <div class="col"><h4>Company</h4><ul><li><a href="careers.html">Careers</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:support@nanoxtech.ai">support@nanoxtech.ai</a></li></ul><p style="margin-top: 1rem;">Dubai · Doha · Remote</p></div>
       </div>
-      <div class="bottom">
-        <p>© 2026 Nanox Technologies. Enterprise Platform Engineering + AI.</p>
-      </div>
+      <div class="bottom"><p>© 2026 Nanox Technologies. Enterprise Platform Engineering + AI.</p><div class="legal"><a href="contact.html">Contact</a><a href="careers.html">Careers</a></div></div>
     </div>
   </footer>
+
+  <div class="cookie-banner" data-cookie-banner data-ga-id="YOUR_GA4_ID" role="dialog" aria-label="Cookie consent">
+    <p><strong>A note on cookies.</strong> We use privacy-friendly analytics by default. With your consent, we also use Google Analytics.</p>
+    <div class="actions">
+      <button class="btn btn-outline" data-consent-reject>Reject</button>
+      <button class="btn btn-primary" data-consent-accept>Accept</button>
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
