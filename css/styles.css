@@ -1182,8 +1182,8 @@ p  { color: var(--fg); }
   margin-bottom: var(--space-12);
 }
 @media (min-width: 768px)  { .footer .main-content { grid-template-columns: 1.5fr 1fr 1fr 1fr; } }
-.footer .brand { max-width: 22rem; }
-.footer .brand .logo img { height: 3.25rem; width: auto; margin-bottom: var(--space-4); }
+.footer .brand { max-width: 26rem; }
+.footer .brand .logo img { height: 7rem; width: auto; margin-bottom: var(--space-4); }
 .footer .brand p { color: var(--fg-muted); line-height: var(--lh-relaxed); }
 
 /* Sister-site callout (footer + hero) */
