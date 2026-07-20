@@ -1,0 +1,48 @@
+NanoX Technologies Website — Changes Log
+=========================================
+Date: July 20, 2026
+
+DESIGN & THEME
+- Switched to dark mode only (removed light theme entirely)
+- Removed theme toggle button
+- Enhanced cards with glassmorphism effects
+- Added floating orbs and particle animations to hero section
+- Added dot grid overlay and WebGL canvas to hero background
+- Updated CSS design system with fluid type scale and custom properties
+
+TYPOGRAPHY
+- Primary font: Inter (400–800 weights) for body and headings
+- Display font: DM Serif Display (italic) for .highlight text
+- Mono font: JetBrains Mono for code elements
+
+HERO SECTION
+- Simplified hero with 4 feature pills: Mission-critical builds, Scale & compliance, AI Governance, AI-enabled workflows
+- Removed heavy SVG icons from feature pills (transparent background)
+- Added particle elements (6 animated spans)
+- Removed eyebrow badge
+
+CONTENT REMOVED
+- Announcement bar removed from index page
+- Events section (GITEX/LEAP) removed from index page
+- "Meeting at GITEX GLOBAL 2026?" banner removed from contact page
+- "we'll respond with next steps within one business day" text removed from contact page
+- "Remote" removed from all location references
+
+CONTENT ADDED/UPDATED
+- Added "Ambient listening for real-time clinical documentation and note generation during consultations" as first item in Healthcare case study (What We Built section)
+- Locations updated to: Dubai · Doha · Abu Dhabi (across all pages)
+
+FILES MODIFIED
+- index.html
+- contact.html
+- css/styles.css
+- js/main.js
+- careers.html
+- case-study-healthcare.html
+- case-study-workforce.html
+- case-study-fintech.html
+
+DEPLOYMENT
+- Hosted via GitHub Pages
+- Repository: https://github.com/saadmsft/nanox-technologies
+- Domain: nanoxtech.ai
