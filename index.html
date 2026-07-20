@@ -32,18 +32,18 @@
   <script>
     (function () {
       try {
-        var s = localStorage.getItem('nanox-theme');
-        var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
-        var theme = s || (prefersLight ? 'light' : 'dark');
-        document.documentElement.setAttribute('data-theme', theme);
-      } catch (_) { document.documentElement.setAttribute('data-theme', 'dark'); }
+        
+        
+        
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } catch (_) {}
     })();
   </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@1&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 
@@ -102,20 +102,7 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Announcement Bar -->
-  <div class="announcement-bar" role="region" aria-label="Site announcement">
-    <div class="container-wide">
-      <svg class="icon icon-calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-      <p>
-        <strong>GITEX GLOBAL 2026</strong>
-        <span class="hidden sm:inline"> · Dubai, Dec 7–11 — book a 15‑min architecture consult.</span>
-      </p>
-      <a href="contact.html" class="btn btn-sm announcement-cta">Book a Call</a>
-      <button class="close-btn" aria-label="Dismiss announcement">
-        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-      </button>
-    </div>
-  </div>
+
 
   <!-- Header -->
   <header class="header transparent">
@@ -134,10 +121,6 @@
       </nav>
 
       <div class="cta-desktop">
-        <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">
-          <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-          <svg class="sun"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m4.93 19.07 1.41-1.41"/><path d="m17.66 6.34 1.41-1.41"/></svg>
-        </button>
         <a href="contact.html" class="btn btn-primary">Book a Call</a>
       </div>
 
@@ -173,29 +156,36 @@
     <!-- Hero -->
     <section class="hero">
       <div class="bg-gradient" aria-hidden="true"></div>
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle p1"></span>
+        <span class="particle p2"></span>
+        <span class="particle p3"></span>
+        <span class="particle p4"></span>
+        <span class="particle p5"></span>
+        <span class="particle p6"></span>
+      </div>
       <canvas class="hero-canvas" aria-hidden="true"></canvas>
       <div class="container-wide">
         <div class="content">
-          <span class="eyebrow fade-up">Enterprise Platform Engineering + AI</span>
           <h1 class="fade-up delay-1">
             Enterprise platforms,<br>
             <span class="highlight">built end-to-end.</span>
           </h1>
           <p class="subtitle fade-up delay-2">
-            We help CEOs and product leaders turn complex operations into secure, scalable software — strategy, architecture, engineering, and long-term reliability.
+            We turn complex operations into secure, scalable software —<br class="hidden-mobile"> strategy, architecture, engineering, and long-term reliability.
           </p>
           <div class="features fade-up delay-3">
             <div class="feature-item">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
-              <span>Multi-year, mission-critical builds</span>
+              <span>Mission-critical builds</span>
             </div>
             <div class="feature-item">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>
-              <span>Built for scale, compliance, real-world ops</span>
+              <span>Scale & compliance</span>
             </div>
             <div class="feature-item">
-              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <span>Full squads: backend, frontend, DevOps, data, AI</span>
+              <span>AI Governance</span>
+            </div>
+            <div class="feature-item">
+              <span>AI-enabled workflows</span>
             </div>
           </div>
           <div class="cta-buttons fade-up delay-4">
@@ -699,53 +689,7 @@
       </div>
     </section>
 
-    <!-- Events -->
-    <section class="events section-padding">
-      <div class="container-wide">
-        <div class="section-header fade-up">
-          <span class="eyebrow">In Person</span>
-          <h2>Meeting in Doha or Dubai?</h2>
-          <p>We're connecting with founders and enterprise leaders across MENA in 2026.</p>
-        </div>
-        <div class="grid">
-          <div class="card highlight fade-up">
-            <div class="card-header">
-              <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
-              <div>
-                <h3>GITEX GLOBAL 2026</h3>
-                <p class="location">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Dubai · Dec 7–11, 2026 (Expo City)
-                </p>
-              </div>
-            </div>
-            <a href="contact.html" class="btn btn-primary btn-full">
-              Book a 15-min meeting
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-          <div class="card fade-up delay-1">
-            <div class="card-header">
-              <div class="icon-wrapper"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
-              <div>
-                <h3>LEAP 2027</h3>
-                <p class="location">
-                  <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Riyadh · Feb 2027 (Malham)
-                </p>
-              </div>
-            </div>
-            <a href="contact.html" class="btn btn-outline btn-full">
-              Join the LEAP list
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-        <p class="footnote fade-in delay-2">
-          Prefer remote? Book a call and we'll share relevant case studies.
-        </p>
-      </div>
-    </section>
+
 
     <!-- FAQ -->
     <section class="faq section-padding">

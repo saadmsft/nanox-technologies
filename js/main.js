@@ -18,19 +18,8 @@
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // ---------------------------------------------------------------
-  // Theme toggle
+  // Theme (dark-only, no toggle)
   // ---------------------------------------------------------------
-  function initTheme() {
-    const btn = document.querySelector('[data-theme-toggle]');
-    if (!btn) return;
-
-    btn.addEventListener('click', () => {
-      const next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', next);
-      try { localStorage.setItem('nanox-theme', next); } catch (_) {}
-      btn.setAttribute('aria-label', next === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
-    });
-  }
 
   // ---------------------------------------------------------------
   // Header scroll effect
@@ -474,7 +463,6 @@
   // Boot
   // ---------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
-    initTheme();
     initHeader();
     initAnnouncementBar();
     initMobileMenu();
