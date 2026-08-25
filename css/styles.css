@@ -525,7 +525,7 @@ p  { color: var(--fg); }
 }
 .header .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
 .header .logo img {
-  width: clamp(260px, 22vw, 320px);
+  width: clamp(180px, 22vw, 320px);
   height: auto;
   max-height: none;
   display: block;
