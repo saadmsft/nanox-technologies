@@ -523,7 +523,7 @@ p  { color: var(--fg); }
   justify-content: space-between;
   height: var(--header-h);
 }
-.header .logo { display: inline-flex; align-items: center; flex-shrink: 0; }
+.header .logo { display: inline-flex; align-items: center; flex-shrink: 0; margin-left: -0.5rem; }
 .header .logo img {
   width: clamp(180px, 22vw, 320px);
   height: auto;
