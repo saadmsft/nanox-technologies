@@ -1,0 +1,16 @@
+{
+  "name": "Nanox Technologies",
+  "short_name": "Nanox",
+  "description": "Enterprise Platform Engineering + AI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07091A",
+  "theme_color": "#07091A",
+  "icons": [
+    {
+      "src": "assets/nanox-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
